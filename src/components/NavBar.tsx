@@ -5,7 +5,7 @@ const NavBar = () => {
   const logoSrc = useColorModeValue("logo_light.png", "logo_dark.png");
   return (
     <HStack justifyContent="space-between" padding="10px">
-      <Image src={logoSrc} boxSize="200px" />
+      <Image src={logoSrc} boxSize="100px" />
       <ColorModeSwitch />
     </HStack>
   );
