@@ -25,4 +25,4 @@ dist-ssr
 *.sw?
 
 #services
-src/services/*
+src\services
