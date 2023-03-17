@@ -8,7 +8,6 @@ import GameCardSkeleton from "./GameCardSkeleton";
 
 interface Props {
   gameQuery: GameQuery;
-
 }
 
 const GameGrid = ({ gameQuery }: Props) => {
@@ -20,9 +19,9 @@ const GameGrid = ({ gameQuery }: Props) => {
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
-        padding={10}
-        spacing={3}
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        padding={2}
+        spacing={6}
       >
         {isLoading &&
           skeletons.map((skeleton) => (
