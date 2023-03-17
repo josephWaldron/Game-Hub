@@ -18,7 +18,9 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
-        <Heading fontSize="2xl">{game.name}</Heading>
+        <Heading fontSize="2xl" paddingBottom={5}>
+          {game.name}
+        </Heading>
         <Box position="absolute" bottom={3} right={3}>
           <Stars rating={game.rating} />
         </Box>
