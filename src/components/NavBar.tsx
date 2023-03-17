@@ -4,12 +4,16 @@ import lightLogo from "../assets/logo_dark.png";
 import darkLogo from "../assets/logo_light.png";
 import SearchInput from "./SearchInput";
 
-const NavBar = () => {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+const NavBar = ({ onSearch }: Props) => {
   const logoSrc = useColorModeValue(darkLogo, lightLogo);
   return (
     <HStack padding="10px">
-      <Image src={logoSrc} boxSize="100px" />
-      <SearchInput />
+      <Image src={logoSrc} boxSize="75px" />
+      <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
   );
