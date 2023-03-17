@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
+import { Box, Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
 import getCroppedImageUrl from "../services/image-url";
 import CriticScore from "./CriticScore";
@@ -19,9 +19,9 @@ const GameCard = ({ game }: Props) => {
           <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
         <Heading fontSize="2xl">{game.name}</Heading>
-        <HStack marginTop={1} float={"right"}>
+        <Box position="absolute" bottom={3} right={3}>
           <Stars rating={game.rating} />
-        </HStack>
+        </Box>
       </CardBody>
     </Card>
   );
