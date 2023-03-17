@@ -12,7 +12,7 @@ const NavBar = ({ onSearch }: Props) => {
   const logoSrc = useColorModeValue(darkLogo, lightLogo);
   return (
     <HStack padding="10px">
-      <Image src={logoSrc} boxSize="75px" />
+      <Image src={logoSrc} boxSize="60px" />
       <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
